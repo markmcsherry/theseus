@@ -1,0 +1,25 @@
+		<button class="btn btn-success" ng-click="newmap()"><i class="fa fa-plus-circle"></i> Create New Map</button>   			
+  
+    </div>  
+      
+    <br/>
+    <br/>
+    <!-- Display all contacts -->
+    <br/>
+		<div class="row">
+			<div ng-repeat="map in maps" class="col-xs-6 col-md-4">
+				<div class="panel panel-default" popover="{{maps.description}}" popover-trigger="mouseenter">
+				  <div class="panel-heading">
+				    <h3 class="panel-title">{{map.title}}</h3>
+				  </div>
+				  <div class="panel-body">
+					<a href="#viewmap/{{map.id}}" class="thumbnail">
+					<img src="assets/basic_map_black.png" alt="open map" >
+					</a>
+					<span><b>Author:</b> {{map.author}}</span><br/>
+					<rating ng-model="map.rating" max="5" readonly="true" ></rating> 
+					<i class="fa fa-thumbs-o-up"></i> {{map.likes}} Likes
+				  </div>
+				</div>
+			</div>
+		</div>

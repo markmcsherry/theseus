@@ -1,0 +1,10 @@
+    <div>
+        <H2>HI THERE...</H2>
+        <table class="table">
+          <tr ng-repeat="row in map">
+            <td ng-repeat="col in row track by $index">
+               <!--{{$parent.$index}}-{{$index}}--> {{col}} 
+            </td>
+          </tr>
+        </table>        
+    </div>

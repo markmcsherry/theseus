@@ -1,0 +1,36 @@
+<!-- mapper.html -->
+    <div class="row">
+        <div class="col-sm-6 col-md-4">    
+            <div class="thumbnail">
+                <center>
+                    <h3>{{contact.name}}</h3>
+                </center>
+                <img src="assets/profile/unknown.jpg" alt="profile pic">
+                    <div class="caption">
+                        <center>
+                            <span>{{contact.tagline}}</span>
+                        </center>
+                    </div>
+                        
+                    <span><b>Email:</b> {{contact.email}}</span><br/>
+                    <span><b>Credits:</b> {{contact.credits}}</span><br/>
+                    <span><b>Status:</b> {{contact.status}}</span><br/>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-8">    
+            <h3>My Maps</h3>
+             <map-list data="profilemaps"></map-list>
+        </div>
+        
+    </div>
+
+
+
+<!-- Awards -->
+    <h3>Awards</h3>
+
+    <div class="well">
+        <img src="assets/awards/lead.png" alt="lead">
+        <img src="assets/awards/firstaid.png" alt="firstaid">
+        <img src="assets/awards/organize.png" alt="organize">
+    </div>
