@@ -1,12 +1,76 @@
-<!doctype html>
-<html lang="en" ng-app>
+<!DOCTYPE html>
+<!-- define angular app -->
+<html ng-app="theseusApp">
+  
   <head>
-    <title>THESEUS</title>
+    <!-- SCROLLS -->
+    <!-- link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/ -->
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css"/>
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- SPELLS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-route.js"></script>
+    <script src="js/ui-bootstrap-tpls-0.11.2.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/mapper.js"></script>
+    <!-- <script src="js/profile.js"></script> -->
   </head>
-  <body>
-    <h1>THESEUS</h1>
-    <p>Theseus was the mythical founder-king of Athens, Slayer of the Minotaur.</p>
+  <!-- define angular controller -->
+  
+  <body ng-controller="mainController">
+    <div id="wrap"><!--Required for footer -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">THESEUS ~ {{maintitle}}</a>
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#mazes"><i class="fa fa-compass"></i> Mazes</a>
+            </li>  
+            <li>
+              <a href="#designer"><i class="fa fa-edit"></i> Designer</a>
+            </li>
+            <li>
+              <a href="#profile"><i class="fa fa-cogs"></i> Profile</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+<!--      <div id="main-header">
+        <img src="assets/background2.jpg" height="125" width="100%" />
+      </div>  -->
+      <div id="alert-container">
+        <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+      </div>
 
-    <h2>abandon all hope ye who enter here!</h2>  
+      <div class="container">
+        <div class="row">
+          <div ng-view></div>
+        </div>
+      </div>
+      
+      <div id="push"></div><!--Required for footer-->
+        
+    </div>
+    <div id="footer">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <ul class="nav navbar-nav navbar-left">
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+          <!-- <div class="nav navbar-nav navbar-right">Developed by: Mark McSherry</div>  --></div>
+      </nav>
+    </div>
   </body>
+
 </html>
