@@ -1,0 +1,6 @@
+{
+  "expressSettings": {
+      "version": "beta 0.1",
+      "publicPath": "/home/ubuntu/workspace/client/public"
+  }
+}
