@@ -64,6 +64,6 @@ app.get('*', function (req, res) {
 //Need to check if PORT & IP Environmental Vars set
 app.listen(process.env.PORT, process.env.IP);
 
-console.log("Server up...("+process.env.PORT+":"+process.env.IP+")"); 
+console.log("Server up...("+process.env.IP+":"+process.env.PORT+")"); 
 
 
