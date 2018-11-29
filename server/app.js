@@ -54,15 +54,16 @@ app.get('/maps', function (req, res) {
 
 
 app.get('*', function (req, res) {
-  res.send('404 - Page not found', 404);
+//  res.send('404 - Page not found', 404);
+  res.status(404).send('404 - Page not found');
 })
 
 //app.post('')
 
 
-
+//Need to check if PORT & IP Environmental Vars set
 app.listen(process.env.PORT, process.env.IP);
 
-console.log("Server up..."); 
+console.log("Server up...("+process.env.PORT+":"+process.env.IP+")"); 
 
 
