@@ -1,7 +1,7 @@
 "use strict";
 
 var express = require('express');
-//var helmet = require('helmet'); //TODO: Look at using this to set HTTP headers
+var helmet = require('helmet'); //TODO: Look at using this to set HTTP headers
 //var express_enforces_ssl = require('express-enforces-ssl'); //TODO: Force HTTPS
 var serveStatic = require('serve-static');
 var config = require('config');
@@ -9,6 +9,12 @@ var fs = require('fs');
 var pathToStatic = "/home/ubuntu/workspace/client/public/json/";
 
 var app = express();
+
+app.use(helmet({
+  frameguard: {
+    action: 'deny'
+  }
+}));
 
 //Setup static serveing to public folder
 var spath = config.get("expressSettings.publicPath");
