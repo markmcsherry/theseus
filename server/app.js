@@ -70,6 +70,7 @@ app.get('*', function (req, res) {
 //Need to check if PORT & IP Environmental Vars set
 app.listen(process.env.PORT, process.env.IP);
 
-console.log("Server up...("+process.env.IP+":"+process.env.PORT+")"); 
+//console.log("Server up...("+process.env.IP+":"+process.env.PORT+")"); 
+console.log('App listening at http://%s:%s', process.env.IP, process.env.PORT);
 
 
